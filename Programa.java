@@ -9,7 +9,10 @@ public class Programa {
 
     System.out.print("Informe o sexo do cliente (M/F): ");
     String sexo = scanner.next();
-    
+
+    Cliente cliente = new Cliente(idade, sexo);
+    double mensalidade = cliente.calcularMensalidade();
+
     scanner.close();
   }
 }    
