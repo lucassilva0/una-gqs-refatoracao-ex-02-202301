@@ -13,6 +13,9 @@ public class Programa {
     Cliente cliente = new Cliente(idade, sexo);
     double mensalidade = cliente.calcularMensalidade();
 
+    if (mensalidade > 0) {
+      System.out.println("Valor da mensalidade: R$" + mensalidade);
+  }
     scanner.close();
   }
 }    
