@@ -42,7 +42,6 @@ public class Programa {
     }
 
     System.out.println("Valor da mensalidade: R$" + mensalidade);
-
     scanner.close();
   }
-}
+}    
