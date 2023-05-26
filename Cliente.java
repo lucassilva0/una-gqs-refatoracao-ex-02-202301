@@ -6,7 +6,7 @@ public class Cliente {
       this.idade = idade;
       this.sexo = sexo;
   }
-
+ 
   private double calcularMensalidadeMasculina() {
     if (idade <= 15) {
         return 60.0;
@@ -35,4 +35,18 @@ public class Cliente {
     }
   }
 
+  public double calcularMensalidade() {
+    double mensalidade;
+
+    if (sexo.equalsIgnoreCase("M")) {
+        mensalidade = calcularMensalidadeMasculina();
+    } else if (sexo.equalsIgnoreCase("F")) {
+        mensalidade = calcularMensalidadeFeminina();
+    } else {
+        System.out.println("Sexo inválido.");
+        mensalidade = 0.0;
+    }
+
+    return mensalidade;
+}
 }
